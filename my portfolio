@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        <body>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 10%;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 40px 10%;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about, .projects, .contact {
+            margin-top: 40px;
+        }
+
+        .projects .project-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-item img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm [Heman Sidda], a passionate  frontend developer skilled in creating amazing web experiences.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>I am a web developer with experience in front-end and back-end technologies. I love building responsive and visually appealing websites that provide an excellent user experience. I'm passionate about creating user-friendly and responsive websites. Continuously learning and improving, I strive to stay updated with the latest web technologies and trends.</p>
+    </section>
+    
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-item">
+            <h3>Project 1</h3>
+            <img src="C:\Users\HP\OneDrive\Pictures\Screenshots\calculator.png" alt="Project 1 Screenshot of calculator">
+            <p><h3>Description of project 1</h3>Calculater Project with basic arithmetic
+                operations functionalities like addition,subtraction, multiplication, and division will be highly useful to a novice who has the essential knowledge of HTML, CSS, and JavaScript. You’ll need to design a user interface with buttons for entering data and a display screen for displaying the results. </p>
+        </div>
+        <div class="project-item">
+            <h3>Project 2</h3>
+            <img src="C:\Users\HP\OneDrive\Pictures\Screenshots\pacman.png" alt="Project 2 Screenshot of pacman">
+            <p><h3>Description of project 2</h3>Pac-Man is an arcade game where the player controls Pac-Man to eat dots in a maze while avoiding ghosts. The objective is to clear the maze and earn points while surviving the ghosts.</p>
+        </div>
+    </section>
+     <footer>
+        <p>&copy; 2024 [Heman Sidda]. All rights reserved.</p>
+    </footer>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>Feel free to reach out to me via email at <a href="mailto:hemusidd1212@gmail.com">hemusidd1212@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Heman Sidda]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
