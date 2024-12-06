@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="photo.css">
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+  </header>
+  <main class="gallery">
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\bikes.jpeg" alt="Bikes">
+    </div>
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\dogs.jpeg" alt="Dogs">
+    </div>
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\guitar.jpeg" alt="GUitar">
+    </div>
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\music.jpeg" alt="Music">
+    </div>
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\beaches.jpeg" alt="Beach">
+    </div>
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\titanic.jpeg" alt="Titanic">
+    </div>
+    <div class="gallery-item">
+      <img src="C:\Users\HP\.vscode\my web\gym.jpeg" alt="Gym">
+    </div>
+    
+    <!-- Add more images as needed -->
+  </main>
+  <div class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <div class="caption"></div>
+  </div>
+  <script src="photo.js"></script>
+</body>
+</html>  
+
+<!--style CSS-->
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+    justify-content:flex-start;
+  }
+  
+  .gallery-item {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: left;
+    align-items: content: '\e822';
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .caption {
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+<!--javascript-->
+// script.js
+const modal = document.querySelector('.modal');
+const modalImg = document.querySelector('#modal-image');
+const captionText = document.querySelector('.caption');
+const close = document.querySelector('.close');
+const galleryItems = document.querySelectorAll('.gallery-item img');
+
+// Open modal when an image is clicked
+galleryItems.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+    captionText.textContent = img.alt;
+  });
+});
+
+// Close modal when the close button is clicked
+close.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', (e) => {
+  if (e.target !== modalImg) {
+    modal.style.display = 'none';
+  }
+});
